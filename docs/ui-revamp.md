@@ -18,15 +18,15 @@ auth, API, or props changed — every existing behaviour is preserved.
 The `@theme` block defines the quiet-luxury vocabulary, on top of the
 existing brand palette (`brand-*` plum, `sun-*` amber, `cream`, `ink`):
 
-| Token | Purpose |
-| --- | --- |
-| `surface`, `surface-raised` | page / card backgrounds |
-| `hairline`, `hairline-strong` | 1px borders and dividers |
-| `ink-deep` | deepest text / dark surfaces |
-| `gold`, `gold-soft` | accent alias — **do not name this `accent`** |
-| `shadow-soft`, `shadow-lift`, `shadow-glow` | layered depth |
-| `radius-xl/2xl/3xl` | generous corners |
-| `text-hero`, `text-display` | fluid `clamp()` display type |
+| Token                                       | Purpose                                      |
+| ------------------------------------------- | -------------------------------------------- |
+| `surface`, `surface-raised`                 | page / card backgrounds                      |
+| `hairline`, `hairline-strong`               | 1px borders and dividers                     |
+| `ink-deep`                                  | deepest text / dark surfaces                 |
+| `gold`, `gold-soft`                         | accent alias — **do not name this `accent`** |
+| `shadow-soft`, `shadow-lift`, `shadow-glow` | layered depth                                |
+| `radius-xl/2xl/3xl`                         | generous corners                             |
+| `text-hero`, `text-display`                 | fluid `clamp()` display type                 |
 
 > **Trap:** shadcn already owns `--accent` / `--color-accent`. Naming a site
 > token `accent` silently re-tints every `bg-accent` hover state (selects,
@@ -81,7 +81,7 @@ Keep text effects to a budget of ~3 per page, and gate every effect on
    `data-lenis-prevent`, React Bits install.
 2. **Shared chrome** — `RevealHeading`, heading reveals in `SectionHeading`
    / `PageHeader`, card depth tokens.
-3. **Home hero** — `SplitText` headline + lazy `Aurora`. *(review gate)*
+3. **Home hero** — `SplitText` headline + lazy `Aurora`. _(review gate)_
 4. **Interior pages** — cards and surfaces migrated to `hairline` /
    `shadow-soft` / `shadow-lift`.
 5. **App / auth screens** — brand-cohesive `--primary` / `--ring`; heavy

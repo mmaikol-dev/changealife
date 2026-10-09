@@ -9,7 +9,7 @@ import { siteEase, prefersReducedMotion, useMotionSafe } from '@/site/motion';
 import { SiteButton, SiteLink } from '@/components/site/button';
 import { Magnetic } from '@/components/site/magnetic';
 import { StatCounter } from '@/components/site/counter';
-import { RevealHeading } from '@/components/site/reveal-heading';
+import SplitText from '@/components/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -158,13 +158,41 @@ export function SiteHero() {
                     Kenyan non-profit since 2019
                 </motion.p>
 
-                <RevealHeading
-                    tag="h1"
-                    text={`${orgName}.`}
-                    delay={28}
-                    duration={0.9}
-                    className="max-w-4xl bg-gradient-to-br from-brand-50 via-brand-50 to-sun-300 bg-clip-text font-display text-5xl leading-[1.05] font-medium tracking-tight text-transparent sm:text-6xl lg:text-7xl"
-                />
+                <h1
+                    aria-label={`${orgName}.`}
+                    className="flex max-w-4xl flex-col font-display text-5xl leading-[1.05] font-medium tracking-tight sm:text-6xl lg:text-7xl"
+                >
+                    <span className="block text-brand-50">
+                        {reduced ? (
+                            orgName.replace(/ Initiative$/, '')
+                        ) : (
+                            <SplitText
+                                tag="span"
+                                text={orgName.replace(/ Initiative$/, '')}
+                                textAlign="left"
+                                delay={26}
+                                duration={0.9}
+                                from={{ opacity: 0, y: 24 }}
+                                to={{ opacity: 1, y: 0 }}
+                            />
+                        )}
+                    </span>
+                    <span className="block text-sun-300">
+                        {reduced ? (
+                            'Initiative.'
+                        ) : (
+                            <SplitText
+                                tag="span"
+                                text="Initiative."
+                                textAlign="left"
+                                delay={26}
+                                duration={0.9}
+                                from={{ opacity: 0, y: 24 }}
+                                to={{ opacity: 1, y: 0 }}
+                            />
+                        )}
+                    </span>
+                </h1>
 
                 <motion.p
                     initial={reduced ? false : { opacity: 0, y: 24 }}
