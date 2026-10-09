@@ -1,5 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import { siteEase, siteViewport, useMotionSafe } from '@/site/motion';
+import { RevealHeading } from '@/components/site/reveal-heading';
 import { cn } from '@/lib/utils';
 
 interface SectionRevealProps {
@@ -107,14 +108,15 @@ export function SectionHeading({
                     {eyebrow}
                 </p>
             ) : null}
-            <h2
+            <RevealHeading
+                text={title}
+                tag="h2"
+                textAlign={align === 'center' ? 'center' : 'left'}
                 className={cn(
                     'mt-2 text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl',
                     titleClassName,
                 )}
-            >
-                {title}
-            </h2>
+            />
             {underline ? (
                 <Underline
                     className={cn(

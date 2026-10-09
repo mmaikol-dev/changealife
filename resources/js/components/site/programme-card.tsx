@@ -39,7 +39,7 @@ export function ProgrammeCard({
         <TiltCard className="h-full">
             <Link
                 href={resolvedHref}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lift focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
                 data-cursor="explore"
             >
                 <div

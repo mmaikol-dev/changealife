@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 import { siteEase, useMotionSafe } from '@/site/motion';
+import { RevealHeading } from '@/components/site/reveal-heading';
 import { cn } from '@/lib/utils';
 
 interface PageHeaderProps {
@@ -73,15 +74,28 @@ export function PageHeader({
                                 {eyebrow}
                             </motion.p>
                         ) : null}
-                        <motion.h1
-                            className={cn(
-                                'mt-3 font-display text-4xl leading-[1.12] font-medium tracking-tight text-brand-50 sm:text-5xl',
-                                titleClassName,
-                            )}
-                            {...rise(eyebrow ? 0.08 : 0)}
-                        >
-                            {title}
-                        </motion.h1>
+                        {typeof title === 'string' ? (
+                            <RevealHeading
+                                text={title}
+                                tag="h1"
+                                delay={30}
+                                duration={0.8}
+                                className={cn(
+                                    'mt-3 font-display text-4xl leading-[1.12] font-medium tracking-tight text-brand-50 sm:text-5xl',
+                                    titleClassName,
+                                )}
+                            />
+                        ) : (
+                            <motion.h1
+                                className={cn(
+                                    'mt-3 font-display text-4xl leading-[1.12] font-medium tracking-tight text-brand-50 sm:text-5xl',
+                                    titleClassName,
+                                )}
+                                {...rise(eyebrow ? 0.08 : 0)}
+                            >
+                                {title}
+                            </motion.h1>
+                        )}
                         {description ? (
                             <motion.p
                                 className={cn(

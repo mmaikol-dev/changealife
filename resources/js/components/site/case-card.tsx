@@ -37,7 +37,7 @@ export function CaseCard({ caseData }: { caseData: SupportCase }) {
         useTilt<HTMLElement>(5);
 
     const className =
-        'group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm transition-[box-shadow] duration-200 ease-out focus-within:ring-2 focus-within:ring-brand-600 hover:shadow-lg';
+        'group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white shadow-soft transition-[box-shadow] duration-200 ease-out focus-within:ring-2 focus-within:ring-brand-600 hover:shadow-lift';
 
     const cardBody = (
         <>
