@@ -53,7 +53,7 @@ export function CaseFilters({
 
     return (
         <form
-            className="rounded-2xl border border-brand-100 bg-white p-5 shadow-sm"
+            className="rounded-2xl border border-hairline bg-white p-5 shadow-soft"
             onSubmit={(event) => {
                 event.preventDefault();
                 apply({ q: query.trim() });

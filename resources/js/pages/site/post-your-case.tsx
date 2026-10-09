@@ -37,7 +37,7 @@ export default function PostYourCase({
                     </SectionReveal>
 
                     <aside className="lg:sticky lg:top-24 lg:self-start">
-                        <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm">
+                        <div className="rounded-2xl border border-hairline bg-white p-6 shadow-soft">
                             <h2 className="text-lg font-semibold text-brand-900">
                                 What happens next
                             </h2>

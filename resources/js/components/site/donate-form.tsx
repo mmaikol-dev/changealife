@@ -56,7 +56,7 @@ export function DonateForm({
     return (
         <form
             onSubmit={submit}
-            className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm"
+            className="rounded-2xl border border-hairline bg-white p-6 shadow-soft"
         >
             <h3 className="text-lg font-semibold text-brand-900">Donate</h3>
             <p className="mt-1 text-sm text-brand-600">

@@ -63,7 +63,7 @@ export default function TechnicalAssistance(_props: TechnicalAssistanceProps) {
                                     (service, index) => (
                                         <div
                                             key={service.name}
-                                            className="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_16px_38px_-20px_rgba(58,35,71,0.25)]"
+                                            className="group rounded-2xl border border-hairline bg-white p-6 shadow-soft transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-hairline-strong hover:shadow-lift"
                                         >
                                             <div className="flex items-center gap-4">
                                                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-700 text-sm font-semibold text-sun-300 transition-colors duration-300 group-hover:bg-brand-600">

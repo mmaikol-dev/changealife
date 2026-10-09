@@ -72,7 +72,7 @@ export function ImageStoryList({
                 {stories.map((story) => (
                     <li
                         key={story.title}
-                        className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm"
+                        className="overflow-hidden rounded-2xl border border-hairline bg-white shadow-soft"
                     >
                         <img
                             src={story.image}

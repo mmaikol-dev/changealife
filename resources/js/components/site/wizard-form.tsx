@@ -196,7 +196,7 @@ export function CaseSubmissionWizard({
     };
 
     return (
-        <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm sm:p-8">
+        <div className="rounded-2xl border border-hairline bg-white p-6 shadow-soft sm:p-8">
             <ol
                 className="flex items-center gap-1 sm:gap-2"
                 aria-label="Form progress"

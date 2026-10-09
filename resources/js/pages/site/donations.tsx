@@ -47,7 +47,7 @@ export default function Donations(_props: DonationsProps) {
                             {giftUses.map(([title, text], index) => (
                                 <li
                                     key={title}
-                                    className="group flex gap-4 rounded-2xl border border-brand-100 bg-white p-5 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_16px_38px_-20px_rgba(58,35,71,0.25)]"
+                                    className="group flex gap-4 rounded-2xl border border-hairline bg-white p-5 shadow-soft transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-hairline-strong hover:shadow-lift"
                                 >
                                     <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sun-500/10 text-sm font-semibold text-sun-700 tabular-nums transition-colors duration-300 group-hover:bg-sun-500/20">
                                         {index + 1}

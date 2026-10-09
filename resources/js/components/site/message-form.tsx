@@ -42,7 +42,7 @@ export function MessageForm({
     return (
         <form
             onSubmit={submit}
-            className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm"
+            className="rounded-2xl border border-hairline bg-white p-6 shadow-soft"
         >
             <h3 className="text-lg font-semibold text-brand-900">{title}</h3>
             {description ? (

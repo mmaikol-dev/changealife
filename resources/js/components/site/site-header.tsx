@@ -123,7 +123,7 @@ export function SiteHeader() {
                             />
                         </button>
                         <div className="invisible absolute top-full left-0 pt-2 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                            <div className="w-64 rounded-2xl border border-brand-100 bg-white p-2 shadow-lg">
+                            <div className="w-64 rounded-2xl border border-hairline bg-white p-2 shadow-lift">
                                 {programmeLinks.map((link) => (
                                     <Link
                                         key={link.href}

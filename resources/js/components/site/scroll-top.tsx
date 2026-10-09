@@ -37,7 +37,7 @@ export function ScrollToTop() {
                     transition={{ duration: 0.35, ease: siteEase }}
                     whileTap={{ scale: 0.9 }}
                     aria-label="Back to top"
-                    className="fixed right-5 bottom-5 z-[85] flex h-11 w-11 items-center justify-center rounded-full border border-brand-700/20 bg-white/80 text-brand-800 shadow-lg shadow-brand-900/10 backdrop-blur transition-colors duration-200 hover:bg-sun-500 hover:text-brand-950 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
+                    className="fixed right-5 bottom-5 z-[85] flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-white/80 text-brand-800 shadow-lift backdrop-blur transition-colors duration-200 hover:bg-sun-500 hover:text-brand-950 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
                 >
                     <ArrowUp aria-hidden="true" className="h-4.5 w-4.5" />
                 </motion.button>

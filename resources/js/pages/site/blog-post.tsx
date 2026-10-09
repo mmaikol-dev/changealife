@@ -5,6 +5,7 @@ import type { BlogPost } from '@/types/site';
 import { index as blogIndex } from '@/routes/blogs';
 import { orgName } from '@/site/content';
 import { ReadingProgress } from '@/components/site/reading-progress';
+import { RevealHeading } from '@/components/site/reveal-heading';
 import { StaggerGroup, StaggerItem } from '@/components/site/section';
 import { ParallaxImage } from '@/components/site/parallax-image';
 
@@ -62,9 +63,13 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                     <p className="mt-6 text-xs font-medium tracking-wide text-sun-600 uppercase">
                         {post.category} · {formatDate(post.publishedAt)}
                     </p>
-                    <h1 className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-brand-900 sm:text-4xl">
-                        {post.title}
-                    </h1>
+                    <RevealHeading
+                        text={post.title}
+                        tag="h1"
+                        delay={22}
+                        duration={0.7}
+                        className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-brand-900 sm:text-4xl"
+                    />
                     <p className="mt-3 text-sm font-medium text-brand-500">
                         By {post.author || orgName}
                     </p>
