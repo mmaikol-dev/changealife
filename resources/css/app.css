@@ -101,6 +101,10 @@
     --color-gold: var(--color-sun-500);
     --color-gold-soft: var(--color-sun-300);
 
+    /* Page container. Site sections bleed wider than Tailwind's default
+       80rem (max-w-7xl) so content fills large displays. */
+    --container-8xl: 96rem;
+
     /* Larger, more generous corners. */
     --radius-xl: 1rem;
     --radius-2xl: 1.375rem;

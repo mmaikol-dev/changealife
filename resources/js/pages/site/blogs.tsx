@@ -31,7 +31,7 @@ export default function Blogs({ posts }: BlogsProps) {
                 </div>
             </PageHeader>
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-24">
                 {posts.length > 0 ? (
                     <StaggerGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {posts.map((post) => (

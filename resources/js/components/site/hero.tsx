@@ -148,7 +148,7 @@ export function SiteHero() {
                 </>
             )}
 
-            <div className="relative mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-4 pt-24 pb-16 sm:px-6 sm:pt-28 lg:pb-24">
+            <div className="relative mx-auto flex w-full max-w-8xl flex-col items-start gap-6 px-4 pt-24 pb-16 sm:px-6 sm:pt-28 lg:pb-24">
                 <motion.p
                     initial={reduced ? false : { opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}

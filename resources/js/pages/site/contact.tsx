@@ -19,7 +19,7 @@ export default function Contact(_props: ContactProps) {
                 description="Questions about a programme, a case, or working together — we would love to hear from you."
             />
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-24">
                 <div className="grid gap-12 lg:grid-cols-[380px_1fr]">
                     <div>
                         <SectionReveal>

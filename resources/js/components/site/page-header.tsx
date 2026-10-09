@@ -63,7 +63,7 @@ export function PageHeader({
                 </>
             )}
 
-            <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+            <div className="relative mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:py-28">
                 <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
                     <div className="max-w-2xl">
                         {eyebrow ? (

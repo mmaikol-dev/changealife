@@ -45,7 +45,7 @@ export default function DirectSupport({
                 description="Choose a verified case and fund someone's need directly — anonymously and transparently."
             />
 
-            <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16">
+            <section className="mx-auto max-w-8xl px-4 py-12 sm:px-6 lg:py-16">
                 <SectionReveal>
                     <CaseFilters
                         filters={filters}

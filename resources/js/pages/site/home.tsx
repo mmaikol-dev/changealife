@@ -43,7 +43,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
 
             <MarqueeStrip items={impactWords} duration={42} />
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-28">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-28">
                 <div className="grid items-center gap-10 lg:grid-cols-2">
                     <SectionReveal>
                         <SectionHeading
@@ -75,7 +75,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
             </section>
 
             <section id="programmes" className="bg-white py-16 lg:py-28">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
+                <div className="mx-auto max-w-8xl px-4 sm:px-6">
                     <SectionReveal>
                         <SectionHeading
                             eyebrow="What we do"
@@ -124,7 +124,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-28">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-28">
                 <SectionReveal>
                     <SectionHeading
                         title="How Can You Help?"
@@ -205,7 +205,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
             </section>
 
             <section className="bg-white py-16 lg:py-28">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
+                <div className="mx-auto max-w-8xl px-4 sm:px-6">
                     <div className="flex flex-wrap items-end justify-between gap-4">
                         <SectionReveal>
                             <SectionHeading
@@ -236,7 +236,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-28">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-28">
                 <div className="flex flex-wrap items-end justify-between gap-4">
                     <SectionReveal>
                         <SectionHeading
@@ -272,7 +272,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                         />
                     </>
                 )}
-                <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-6 text-center sm:px-6">
+                <div className="relative mx-auto flex max-w-8xl flex-col items-center gap-6 px-4 py-6 text-center sm:px-6">
                     <SectionReveal>
                         <h2 className="max-w-3xl font-display text-4xl font-medium tracking-tight text-brand-50 sm:text-5xl">
                             Every gift, however small,{' '}

@@ -26,7 +26,7 @@ export default function PostYourCase({
                 description="Nominate an individual, family, or school in need of support. Our team verifies each case before deciding whether to publish it."
             />
 
-            <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16">
+            <section className="mx-auto max-w-8xl px-4 py-12 sm:px-6 lg:py-16">
                 <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
                     <SectionReveal>
                         <CaseSubmissionWizard

@@ -29,7 +29,7 @@ const year = new Date().getFullYear();
 export function SiteFooter() {
     return (
         <footer className="bg-brand-950 text-brand-200">
-            <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4">
+            <div className="mx-auto grid max-w-8xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4">
                 <div>
                     <Link
                         href={home.url()}
@@ -126,7 +126,7 @@ export function SiteFooter() {
             </div>
 
             <div className="border-t border-brand-800">
-                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-brand-400 sm:flex-row sm:px-6">
+                <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-brand-400 sm:flex-row sm:px-6">
                     <p>
                         © {year}. All Rights Reserved. {orgName}.
                     </p>

@@ -27,7 +27,7 @@ export default function Programme({ programme }: ProgrammeProps) {
                 image={data.image}
             />
 
-            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+            <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-24">
                 <div className="grid gap-12 lg:grid-cols-[1fr_360px]">
                     <div>
                         <SectionReveal>
@@ -96,7 +96,7 @@ export default function Programme({ programme }: ProgrammeProps) {
             </section>
 
             <section className="bg-brand-950 py-16 lg:py-20">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
+                <div className="mx-auto max-w-8xl px-4 sm:px-6">
                     <SectionReveal>
                         <SectionHeading
                             eyebrow="Across the organisation"

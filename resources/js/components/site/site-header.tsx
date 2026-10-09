@@ -71,7 +71,7 @@ export function SiteHeader() {
         >
             <div
                 className={cn(
-                    'mx-auto flex max-w-7xl items-center justify-between px-4 transition-[height] duration-200 sm:px-6',
+                    'mx-auto flex max-w-8xl items-center justify-between px-4 transition-[height] duration-200 sm:px-6',
                     scrolled ? 'h-14' : 'h-16',
                 )}
             >
@@ -181,7 +181,7 @@ export function SiteHeader() {
                         className="overflow-hidden border-t border-brand-100 bg-white lg:hidden"
                     >
                         <nav
-                            className="max-w-7xl space-y-1 px-4 py-4 sm:px-6"
+                            className="max-w-8xl space-y-1 px-4 py-4 sm:px-6"
                             aria-label="Mobile navigation"
                         >
                             {navLinks.map((link) => (
