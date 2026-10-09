@@ -33,7 +33,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
                 <p className="text-xs font-medium tracking-wide text-sun-600 uppercase">
                     {post.category} · {formatDate(post.publishedAt)}
                 </p>
-                <h3 className="mt-2 line-clamp-2 text-lg leading-snug font-semibold text-brand-900 group-hover:text-brand-700">
+                <h3 className="mt-2 line-clamp-2 text-lg leading-snug font-semibold text-heading group-hover:text-brand-700">
                     {post.title}
                 </h3>
                 <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-brand-700/80">
@@ -74,7 +74,7 @@ export function BlogRow({ post }: { post: BlogPost }) {
                 <p className="text-xs font-medium tracking-[0.16em] text-sun-600 uppercase">
                     {post.category}
                 </p>
-                <h3 className="mt-2 text-xl leading-snug font-semibold tracking-tight text-brand-900 transition-colors duration-300 group-hover:text-brand-600 sm:text-2xl">
+                <h3 className="mt-2 text-xl leading-snug font-semibold tracking-tight text-heading transition-colors duration-300 group-hover:text-brand-600 sm:text-2xl">
                     {post.title}
                 </h3>
                 <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-brand-700/80">

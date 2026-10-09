@@ -23,7 +23,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
     }, [url]);
 
     return (
-        <div className="flex min-h-screen flex-col bg-cream">
+        <div className="flex min-h-screen flex-col bg-white">
             {reduced ? null : (
                 <motion.div
                     aria-hidden="true"

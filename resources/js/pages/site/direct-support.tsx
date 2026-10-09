@@ -89,7 +89,7 @@ export default function DirectSupport({
                                     ))}
                                 </StaggerGroup>
                             ) : (
-                                <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-brand-200 bg-cream px-6 py-20 text-center">
+                                <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-brand-200 bg-sun-50 px-6 py-20 text-center">
                                     <SearchX
                                         aria-hidden="true"
                                         className="h-12 w-12 text-brand-300"

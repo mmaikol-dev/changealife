@@ -28,7 +28,7 @@ export default function Legal({ document }: LegalProps) {
                             key={section.heading}
                             delay={Math.min(index * 0.03, 0.15)}
                         >
-                            <h2 className="text-lg font-semibold text-brand-900">
+                            <h2 className="text-lg font-semibold text-heading">
                                 {section.heading}
                             </h2>
                             <div className="mt-2 space-y-3">

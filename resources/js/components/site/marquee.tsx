@@ -31,7 +31,7 @@ export function MarqueeStrip({
                 'site-marquee-group relative overflow-hidden py-5',
                 dark
                     ? 'bg-brand-950 text-brand-50'
-                    : 'border-y border-brand-100 bg-cream text-brand-900',
+                    : 'border-y border-brand-100 bg-sun-50 text-heading',
                 className,
             )}
             aria-hidden="true"

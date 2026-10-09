@@ -51,7 +51,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                 <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
                     <Link
                         href={blogIndex.url()}
-                        className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-600 underline-offset-4 transition-colors hover:text-brand-900"
+                        className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-600 underline-offset-4 transition-colors hover:text-heading"
                     >
                         <ArrowLeft
                             aria-hidden="true"
@@ -68,7 +68,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                         tag="h1"
                         delay={22}
                         duration={0.7}
-                        className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-brand-900 sm:text-4xl"
+                        className="mt-3 text-3xl leading-tight font-semibold tracking-tight text-heading sm:text-4xl"
                     />
                     <p className="mt-3 text-sm font-medium text-brand-500">
                         By {post.author || orgName}

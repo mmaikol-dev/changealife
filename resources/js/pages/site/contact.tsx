@@ -33,7 +33,7 @@ export default function Contact(_props: ContactProps) {
                                         />
                                     </span>
                                     <div>
-                                        <h3 className="text-sm font-semibold text-brand-900">
+                                        <h3 className="text-sm font-semibold text-heading">
                                             Address
                                         </h3>
                                         <address className="mt-0.5 text-sm leading-relaxed text-brand-600 not-italic">
@@ -58,12 +58,12 @@ export default function Contact(_props: ContactProps) {
                                         />
                                     </span>
                                     <div>
-                                        <h3 className="text-sm font-semibold text-brand-900">
+                                        <h3 className="text-sm font-semibold text-heading">
                                             Phone
                                         </h3>
                                         <a
                                             href={orgContact.phoneHref}
-                                            className="mt-0.5 block text-sm text-brand-600 underline-offset-4 transition-colors hover:text-brand-900 hover:underline"
+                                            className="mt-0.5 block text-sm text-brand-600 underline-offset-4 transition-colors hover:text-heading hover:underline"
                                         >
                                             {orgContact.phone}
                                         </a>
@@ -77,12 +77,12 @@ export default function Contact(_props: ContactProps) {
                                         />
                                     </span>
                                     <div>
-                                        <h3 className="text-sm font-semibold text-brand-900">
+                                        <h3 className="text-sm font-semibold text-heading">
                                             Email
                                         </h3>
                                         <a
                                             href={orgContact.emailHref}
-                                            className="mt-0.5 block text-sm text-brand-600 underline-offset-4 transition-colors hover:text-brand-900 hover:underline"
+                                            className="mt-0.5 block text-sm text-brand-600 underline-offset-4 transition-colors hover:text-heading hover:underline"
                                         >
                                             {orgContact.email}
                                         </a>

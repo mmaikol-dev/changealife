@@ -12,7 +12,6 @@ import {
 import { index as blogIndex } from '@/routes/blogs';
 import { technicalAssistance, directSupport } from '@/routes';
 import { useMotionSafe } from '@/site/motion';
-import { cn } from '@/lib/utils';
 import { SiteHero } from '@/components/site/hero';
 import {
     SectionHeading,
@@ -20,7 +19,9 @@ import {
     StaggerGroup,
     StaggerItem,
 } from '@/components/site/section';
-import { ProgrammeCard } from '@/components/site/programme-card';
+import { ProgrammesCarousel } from '@/components/site/programmes-carousel';
+import type { CarouselItem } from '@/components/site/programmes-carousel';
+import { programmeHrefs } from '@/components/site/programme-card';
 import { CaseCard } from '@/components/site/case-card';
 import { BlogRow } from '@/components/site/blog-card';
 import { SiteLink } from '@/components/site/button';
@@ -34,6 +35,24 @@ interface HomeProps extends PageProps {
 
 export default function Home({ cases, blogPosts }: HomeProps) {
     const { reduced } = useMotionSafe();
+
+    const programmeItems: CarouselItem[] = [
+        ...programmes.map((programme) => ({
+            key: programme.key,
+            name: programme.name,
+            short: programme.short,
+            image: programme.image,
+            href: programmeHrefs[programme.key] ?? technicalAssistance.url(),
+        })),
+        {
+            key: 'technical-assistance',
+            name: technicalAssistanceData.name,
+            short: technicalAssistanceData.intro,
+            image: technicalAssistanceData.image,
+            href: technicalAssistance.url(),
+            accent: 'sun',
+        },
+    ];
 
     return (
         <>
@@ -68,61 +87,14 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                         src="/images/cali/who-we-are.jpg"
                         alt="Change A Life team engaging with children in the community"
                         speed={0.08}
+                        slideX={14}
                         className="aspect-[4/3] rounded-3xl sm:aspect-[16/7]"
                         imgClassName="rounded-3xl"
                     />
                 </SectionReveal>
             </section>
 
-            <section id="programmes" className="bg-white py-16 lg:py-28">
-                <div className="mx-auto max-w-8xl px-4 sm:px-6">
-                    <SectionReveal>
-                        <SectionHeading
-                            eyebrow="What we do"
-                            title="Our Programmes"
-                            description="Five ways we support vulnerable communities — four direct development programmes, plus a Technical Assistance practice that helps the NGOs serving them."
-                            align="center"
-                        />
-                    </SectionReveal>
-                    <StaggerGroup
-                        className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6"
-                        amount={0.1}
-                    >
-                        {programmes.map((programme, index) => (
-                            <StaggerItem
-                                key={programme.key}
-                                className={cn(
-                                    'h-full',
-                                    index < 2
-                                        ? 'lg:col-span-3'
-                                        : 'lg:col-span-2',
-                                )}
-                            >
-                                <ProgrammeCard
-                                    programme={programme}
-                                    large={index < 2}
-                                />
-                            </StaggerItem>
-                        ))}
-                        <StaggerItem className="h-full lg:col-span-2">
-                            <ProgrammeCard
-                                programme={{
-                                    key: 'special-projects',
-                                    name: technicalAssistanceData.name,
-                                    short: technicalAssistanceData.intro,
-                                    tagline: '',
-                                    description: [],
-                                    bullets: [],
-                                    goal: '',
-                                    image: technicalAssistanceData.image,
-                                }}
-                                accent="sun"
-                                href={technicalAssistance.url()}
-                            />
-                        </StaggerItem>
-                    </StaggerGroup>
-                </div>
-            </section>
+            <ProgrammesCarousel programmes={programmeItems} />
 
             <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-28">
                 <SectionReveal>
@@ -185,7 +157,7 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                                             />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h3 className="text-lg font-semibold text-brand-900 transition-colors duration-300 group-hover:text-sun-600">
+                                            <h3 className="text-lg font-semibold text-heading transition-colors duration-300 group-hover:text-sun-600">
                                                 {block.title}
                                             </h3>
                                             <p className="mt-1 text-sm leading-relaxed text-brand-700/80">

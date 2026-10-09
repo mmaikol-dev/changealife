@@ -80,7 +80,7 @@ export function ImageStoryList({
                             className="h-44 w-full object-cover"
                         />
                         <div className="p-5">
-                            <h3 className="text-lg font-semibold text-brand-900">
+                            <h3 className="text-lg font-semibold text-heading">
                                 {story.title}
                             </h3>
                             <p className="mt-1 text-sm leading-relaxed text-brand-700/80">
@@ -107,7 +107,7 @@ export function ImageStoryList({
                         tabIndex={0}
                         className="group cursor-pointer border-b border-brand-100 py-6 outline-none"
                     >
-                        <h3 className="text-xl font-semibold text-brand-900 transition-colors duration-200 group-hover:text-brand-600 group-focus-visible:text-brand-600">
+                        <h3 className="text-xl font-semibold text-heading transition-colors duration-200 group-hover:text-brand-600 group-focus-visible:text-brand-600">
                             <span className="mr-3 inline-block text-sun-500">
                                 ⌁
                             </span>

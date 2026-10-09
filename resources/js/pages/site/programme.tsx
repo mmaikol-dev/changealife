@@ -45,7 +45,7 @@ export default function Programme({ programme }: ProgrammeProps) {
                         </div>
 
                         <SectionReveal delay={0.1} className="mt-10">
-                            <h2 className="text-xl font-semibold text-brand-900">
+                            <h2 className="text-xl font-semibold text-heading">
                                 Support includes
                             </h2>
                             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -74,7 +74,7 @@ export default function Programme({ programme }: ProgrammeProps) {
                             <h2 className="text-sm font-semibold tracking-wide text-brand-500 uppercase">
                                 Our goal
                             </h2>
-                            <p className="mt-2 text-base leading-relaxed font-medium text-brand-900">
+                            <p className="mt-2 text-base leading-relaxed font-medium text-heading">
                                 {data.goal}
                             </p>
                         </SectionReveal>

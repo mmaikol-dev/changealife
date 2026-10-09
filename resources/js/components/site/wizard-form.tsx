@@ -642,7 +642,7 @@ export function CaseSubmissionWizard({
                                     </span>
                                     <label
                                         htmlFor="case-images"
-                                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-brand-200 bg-cream px-4 py-8 text-center transition-colors duration-150 hover:border-sun-400"
+                                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-brand-200 bg-sun-50 px-4 py-8 text-center transition-colors duration-150 hover:border-sun-400"
                                     >
                                         <ImagePlus
                                             aria-hidden="true"
@@ -762,7 +762,7 @@ export function CaseSubmissionWizard({
                                         value={data.nominator_email}
                                     />
                                 </dl>
-                                <p className="rounded-xl bg-cream p-4 text-sm leading-relaxed text-brand-700">
+                                <p className="rounded-xl bg-sun-50 p-4 text-sm leading-relaxed text-brand-700">
                                     {data.challenge}
                                 </p>
                                 <p className="text-sm text-brand-600">

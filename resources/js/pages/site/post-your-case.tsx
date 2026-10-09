@@ -38,7 +38,7 @@ export default function PostYourCase({
 
                     <aside className="lg:sticky lg:top-24 lg:self-start">
                         <div className="rounded-2xl border border-hairline bg-white p-6 shadow-soft">
-                            <h2 className="text-lg font-semibold text-brand-900">
+                            <h2 className="text-lg font-semibold text-heading">
                                 What happens next
                             </h2>
                             <ol className="mt-4 space-y-4">
@@ -65,7 +65,7 @@ export default function PostYourCase({
                                             {index + 1}
                                         </span>
                                         <div>
-                                            <h3 className="text-sm font-semibold text-brand-900">
+                                            <h3 className="text-sm font-semibold text-heading">
                                                 {title}
                                             </h3>
                                             <p className="mt-0.5 text-sm leading-relaxed text-brand-600">

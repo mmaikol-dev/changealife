@@ -51,7 +51,7 @@ export default function TechnicalAssistance(_props: TechnicalAssistanceProps) {
                             <h2 className="text-sm font-semibold tracking-wide text-brand-500 uppercase">
                                 Who we work with
                             </h2>
-                            <p className="mt-2 text-base leading-relaxed font-medium text-brand-900">
+                            <p className="mt-2 text-base leading-relaxed font-medium text-heading">
                                 {technicalAssistance.whoWeWorkWith}
                             </p>
                         </SectionReveal>
@@ -69,7 +69,7 @@ export default function TechnicalAssistance(_props: TechnicalAssistanceProps) {
                                                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-700 text-sm font-semibold text-sun-300 transition-colors duration-300 group-hover:bg-brand-600">
                                                     {index + 1}
                                                 </span>
-                                                <h3 className="text-lg font-semibold text-brand-900">
+                                                <h3 className="text-lg font-semibold text-heading">
                                                     {service.name}
                                                 </h3>
                                             </div>

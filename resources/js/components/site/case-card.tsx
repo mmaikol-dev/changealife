@@ -65,7 +65,7 @@ export function CaseCard({ caseData }: { caseData: SupportCase }) {
                     ))}
                 </div>
 
-                <h3 className="mt-3 text-lg leading-snug font-semibold text-brand-900">
+                <h3 className="mt-3 text-lg leading-snug font-semibold text-heading">
                     {caseData.title}
                 </h3>
                 <p className="mt-1 text-sm text-brand-600">

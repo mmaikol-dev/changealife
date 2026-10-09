@@ -94,12 +94,15 @@
        Note: `gold` (not `accent`) avoids shadowing shadcn's own `--accent`
        token, which drive select and dropdown hover states. */
     --color-ink-deep: oklch(0.178 0.037 305);
-    --color-surface: var(--color-cream);
+    --color-surface: oklch(1 0 0);
     --color-surface-raised: oklch(1 0 0);
     --color-hairline: oklch(0.18 0.037 305 / 0.1);
     --color-hairline-strong: oklch(0.18 0.037 305 / 0.16);
     --color-gold: var(--color-sun-500);
     --color-gold-soft: var(--color-sun-300);
+
+    /* White + amber carry the page; deep plum is reserved for headings. */
+    --color-heading: var(--color-brand-700);
 
     /* Page container. Site sections bleed wider than Tailwind's default
        80rem (max-w-7xl) so content fills large displays. */

@@ -58,7 +58,7 @@ export function DonateForm({
             onSubmit={submit}
             className="rounded-2xl border border-hairline bg-white p-6 shadow-soft"
         >
-            <h3 className="text-lg font-semibold text-brand-900">Donate</h3>
+            <h3 className="text-lg font-semibold text-heading">Donate</h3>
             <p className="mt-1 text-sm text-brand-600">
                 {compact
                     ? 'Choose an amount to give.'
@@ -86,7 +86,7 @@ export function DonateForm({
                                 'rounded-xl border px-2 py-2 text-xs font-semibold transition-colors duration-150',
                                 isPreset(preset.amount)
                                     ? 'border-sun-500 bg-sun-500 text-brand-950'
-                                    : 'border-brand-200 bg-cream text-brand-700 hover:border-sun-400',
+                                    : 'border-brand-200 bg-sun-50 text-brand-700 hover:border-sun-400',
                             ].join(' ')}
                         >
                             {preset.label}

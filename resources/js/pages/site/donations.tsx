@@ -53,7 +53,7 @@ export default function Donations(_props: DonationsProps) {
                                         {index + 1}
                                     </span>
                                     <div>
-                                        <h3 className="font-semibold text-brand-900">
+                                        <h3 className="font-semibold text-heading">
                                             {title}
                                         </h3>
                                         <p className="mt-1 text-sm leading-relaxed text-brand-700/85">
@@ -72,7 +72,7 @@ export default function Donations(_props: DonationsProps) {
                                 similar programme. Please read our{' '}
                                 <Link
                                     href={terms.url()}
-                                    className="font-medium text-brand-700 underline underline-offset-4 hover:text-brand-900"
+                                    className="font-medium text-brand-700 underline underline-offset-4 hover:text-heading"
                                 >
                                     Terms and Conditions
                                 </Link>

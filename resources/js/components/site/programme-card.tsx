@@ -11,7 +11,7 @@ import { technicalAssistance } from '@/routes';
 import { cn } from '@/lib/utils';
 import { TiltCard } from '@/components/site/tilt-card';
 
-const programmeHrefs: Record<string, string> = {
+export const programmeHrefs: Record<string, string> = {
     'empower-her-wellness': empowerHerWellness.url(),
     'disability-inclusion': disabilityInclusion.url(),
     'digital-literacy': digitalLiteracy.url(),
@@ -60,7 +60,7 @@ export function ProgrammeCard({
                 <div className={cn('flex flex-1 flex-col p-5', large && 'p-6')}>
                     <h3
                         className={cn(
-                            'text-lg font-semibold text-brand-900',
+                            'text-lg font-semibold text-heading',
                             large && 'text-xl',
                         )}
                     >

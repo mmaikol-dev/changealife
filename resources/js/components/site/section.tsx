@@ -113,7 +113,7 @@ export function SectionHeading({
                 tag="h2"
                 textAlign={align === 'center' ? 'center' : 'left'}
                 className={cn(
-                    'mt-2 text-3xl font-semibold tracking-tight text-brand-900 sm:text-4xl',
+                    'mt-2 text-3xl font-semibold tracking-tight text-heading sm:text-4xl',
                     titleClassName,
                 )}
             />

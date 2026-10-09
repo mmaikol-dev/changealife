@@ -64,9 +64,9 @@ export function SiteHeader() {
     return (
         <header
             className={cn(
-                'sticky top-0 z-50 w-full border-b border-brand-100 bg-cream/90 backdrop-blur transition-[box-shadow,height,padding] duration-200 ease-out',
+                'sticky top-0 z-50 w-full border-b border-brand-100 bg-white/85 backdrop-blur transition-[box-shadow,height,padding] duration-200 ease-out',
                 scrolled &&
-                    'border-transparent bg-cream/95 shadow-[0_14px_34px_-18px_rgba(58,35,71,0.3)]',
+                    'border-transparent bg-white/95 shadow-[0_14px_34px_-18px_rgba(58,35,71,0.3)]',
             )}
         >
             <div
@@ -87,7 +87,7 @@ export function SiteHeader() {
                         width={36}
                         height={36}
                     />
-                    <span className="hidden text-base font-semibold tracking-tight text-brand-900 sm:block">
+                    <span className="hidden text-base font-semibold tracking-tight text-heading sm:block">
                         Change A Life
                     </span>
                 </Link>
@@ -101,9 +101,9 @@ export function SiteHeader() {
                             key={link.href}
                             href={link.href}
                             className={cn(
-                                'relative rounded-full px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-200 after:absolute after:right-3 after:bottom-0.5 after:left-3 after:h-0.5 after:origin-left after:scale-x-0 after:bg-sun-500 after:transition-transform after:duration-200 hover:text-brand-900 hover:after:scale-x-100 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none',
+                                'relative rounded-full px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-200 after:absolute after:right-3 after:bottom-0.5 after:left-3 after:h-0.5 after:origin-left after:scale-x-0 after:bg-sun-500 after:transition-transform after:duration-200 hover:text-heading hover:after:scale-x-100 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none',
                                 isActive(link.href) &&
-                                    'text-brand-900 after:scale-x-100',
+                                    'text-heading after:scale-x-100',
                             )}
                         >
                             {link.label}
@@ -113,7 +113,7 @@ export function SiteHeader() {
                     <div className="group relative px-1">
                         <button
                             type="button"
-                            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-200 after:absolute after:right-3 after:bottom-0.5 after:left-3 after:h-0.5 after:origin-left after:scale-x-0 after:bg-sun-500 after:transition-transform after:duration-200 hover:text-brand-900 hover:after:scale-x-100 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
+                            className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-200 after:absolute after:right-3 after:bottom-0.5 after:left-3 after:h-0.5 after:origin-left after:scale-x-0 after:bg-sun-500 after:transition-transform after:duration-200 hover:text-heading hover:after:scale-x-100 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none"
                             aria-haspopup="true"
                         >
                             Our Work
@@ -129,9 +129,9 @@ export function SiteHeader() {
                                         key={link.href}
                                         href={link.href}
                                         className={cn(
-                                            'block rounded-xl px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-150 hover:bg-cream hover:text-brand-900 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none',
+                                            'block rounded-xl px-3 py-2 text-sm font-medium text-brand-700 transition-colors duration-150 hover:bg-sun-50 hover:text-heading focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none',
                                             isActive(link.href) &&
-                                                'bg-cream text-brand-900',
+                                                'bg-sun-50 text-heading',
                                         )}
                                     >
                                         {link.label}
@@ -188,7 +188,7 @@ export function SiteHeader() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-brand-800 hover:bg-cream"
+                                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-brand-800 hover:bg-sun-50"
                                 >
                                     {link.label}
                                 </Link>
@@ -200,7 +200,7 @@ export function SiteHeader() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-brand-800 hover:bg-cream"
+                                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-brand-800 hover:bg-sun-50"
                                 >
                                     {link.label}
                                 </Link>

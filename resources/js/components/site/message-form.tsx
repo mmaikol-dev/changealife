@@ -44,7 +44,7 @@ export function MessageForm({
             onSubmit={submit}
             className="rounded-2xl border border-hairline bg-white p-6 shadow-soft"
         >
-            <h3 className="text-lg font-semibold text-brand-900">{title}</h3>
+            <h3 className="text-lg font-semibold text-heading">{title}</h3>
             {description ? (
                 <p className="mt-1 text-sm text-brand-600">{description}</p>
             ) : null}
