@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,9 +9,11 @@ import { siteEase, prefersReducedMotion, useMotionSafe } from '@/site/motion';
 import { SiteButton, SiteLink } from '@/components/site/button';
 import { Magnetic } from '@/components/site/magnetic';
 import { StatCounter } from '@/components/site/counter';
-import { WaveText, waveStagger } from '@/components/site/wave-text';
+import { RevealHeading } from '@/components/site/reveal-heading';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+const LazyAurora = lazy(() => import('@/components/Aurora'));
 
 const statIntervalMs = 4200;
 
@@ -121,10 +123,28 @@ export function SiteHero() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-brand-950/80 via-brand-950/60 to-brand-950/90" />
 
-            {reduced ? null : (
+            {reduced ? (
                 <>
                     <div className="site-aurora absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-sun-500/25 blur-[110px]" />
                     <div className="site-aurora site-aurora-delay absolute right-[-10%] bottom-[-20%] h-[26rem] w-[26rem] rounded-full bg-brand-400/30 blur-[120px]" />
+                </>
+            ) : (
+                <>
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 hidden opacity-60 mix-blend-screen lg:block"
+                    >
+                        <Suspense fallback={null}>
+                            <LazyAurora
+                                colorStops={['#2a1b33', '#d9a441', '#3a2347']}
+                                amplitude={0.9}
+                                blend={0.55}
+                                speed={0.6}
+                            />
+                        </Suspense>
+                    </div>
+                    <div className="site-aurora absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-sun-500/25 blur-[110px] lg:hidden" />
+                    <div className="site-aurora site-aurora-delay absolute right-[-10%] bottom-[-20%] h-[26rem] w-[26rem] rounded-full bg-brand-400/30 blur-[120px] lg:hidden" />
                 </>
             )}
 
@@ -138,27 +158,13 @@ export function SiteHero() {
                     Kenyan non-profit since 2019
                 </motion.p>
 
-                <motion.h1
-                    initial={reduced ? false : { opacity: 0, y: 26 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: siteEase, delay: 0.1 }}
-                    className="max-w-4xl font-brush text-5xl leading-[1.15] font-medium tracking-tight text-brand-50 sm:text-6xl lg:text-7xl"
-                >
-                    <WaveText
-                        text={orgName.replace(/ Initiative$/, '')}
-                        delay={0.1}
-                    />
-                    <span className="block text-sun-300">
-                        <WaveText
-                            text="Initiative."
-                            delay={
-                                0.1 +
-                                orgName.replace(/ Initiative$/, '').length *
-                                    waveStagger
-                            }
-                        />
-                    </span>
-                </motion.h1>
+                <RevealHeading
+                    tag="h1"
+                    text={`${orgName}.`}
+                    delay={28}
+                    duration={0.9}
+                    className="max-w-4xl bg-gradient-to-br from-brand-50 via-brand-50 to-sun-300 bg-clip-text font-display text-5xl leading-[1.05] font-medium tracking-tight text-transparent sm:text-6xl lg:text-7xl"
+                />
 
                 <motion.p
                     initial={reduced ? false : { opacity: 0, y: 24 }}
