@@ -89,6 +89,37 @@
     --color-cream: oklch(0.987 0.006 90);
     --color-cream-muted: oklch(0.965 0.008 88);
     --color-ink: oklch(0.24 0.05 305);
+
+    /* Semantic layer — the quiet-luxury vocabulary used across the site. */
+    --color-ink-deep: oklch(0.178 0.037 305);
+    --color-surface: var(--color-cream);
+    --color-surface-raised: oklch(1 0 0);
+    --color-hairline: oklch(0.18 0.037 305 / 0.1);
+    --color-hairline-strong: oklch(0.18 0.037 305 / 0.16);
+    --color-accent: var(--color-sun-500);
+    --color-accent-soft: var(--color-sun-300);
+
+    /* Larger, more generous corners. */
+    --radius-xl: 1rem;
+    --radius-2xl: 1.375rem;
+    --radius-3xl: 1.75rem;
+
+    /* Soft glow depth instead of heavy drop shadows. */
+    --shadow-soft:
+        0 1px 2px oklch(0.18 0.037 305 / 0.05),
+        0 10px 30px -18px oklch(0.18 0.037 305 / 0.22);
+    --shadow-lift:
+        0 2px 6px oklch(0.18 0.037 305 / 0.06),
+        0 28px 60px -28px oklch(0.18 0.037 305 / 0.3);
+    --shadow-glow: 0 20px 60px -24px oklch(0.764 0.128 66 / 0.45);
+
+    /* Fluid display scale — big headlines, tight tracking. */
+    --text-hero: clamp(2.75rem, 1.2rem + 7vw, 6.5rem);
+    --text-hero--line-height: 0.98;
+    --text-hero--letter-spacing: -0.03em;
+    --text-display: clamp(2rem, 1rem + 3.6vw, 3.75rem);
+    --text-display--line-height: 1.04;
+    --text-display--letter-spacing: -0.02em;
 }
 
 :root {
@@ -169,7 +200,37 @@
 
     body {
         @apply bg-background text-foreground;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
+
+    /* One accessible focus treatment for every interactive element that
+       does not already ship its own ring. */
+    :where(
+        a,
+        button,
+        input,
+        textarea,
+        select,
+        summary,
+        [tabindex]
+    ):focus-visible {
+        outline: 2px solid color-mix(in oklch, var(--color-sun-500) 85%, black);
+        outline-offset: 2px;
+    }
+}
+
+/* Full-viewport film grain. Purely decorative: fixed, non-interactive, and
+   painted beneath every elevated layer (header, dialogs, curtain). */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
 }
 
 @keyframes site-underline-in {

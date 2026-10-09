@@ -1,5 +1,3 @@
 {
-  "plugin": [
-    "@dietrichgebert/ponytail"
-  ]
+    "plugin": ["@dietrichgebert/ponytail"]
 }
