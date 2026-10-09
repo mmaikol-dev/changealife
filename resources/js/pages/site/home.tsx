@@ -21,6 +21,7 @@ import {
 } from '@/components/site/section';
 import { ProgrammesCarousel } from '@/components/site/programmes-carousel';
 import type { CarouselItem } from '@/components/site/programmes-carousel';
+import { DirectionalReveal } from '@/components/site/directional-reveal';
 import { programmeHrefs } from '@/components/site/programme-card';
 import { CaseCard } from '@/components/site/case-card';
 import { BlogRow } from '@/components/site/blog-card';
@@ -82,16 +83,15 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                         ))}
                     </SectionReveal>
                 </div>
-                <SectionReveal className="mt-14" y={36}>
+                <DirectionalReveal className="mt-14" distance={120}>
                     <ParallaxImage
                         src="/images/cali/who-we-are.jpg"
                         alt="Change A Life team engaging with children in the community"
                         speed={0.08}
-                        slideX={14}
                         className="aspect-[4/3] rounded-3xl sm:aspect-[16/7]"
                         imgClassName="rounded-3xl"
                     />
-                </SectionReveal>
+                </DirectionalReveal>
             </section>
 
             <ProgrammesCarousel programmes={programmeItems} />
