@@ -25,6 +25,7 @@ export default function Programme({ programme }: ProgrammeProps) {
                 title={data.name}
                 description={data.tagline}
                 image={data.image}
+                images={data.gallery}
             />
 
             <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:py-24">
@@ -82,7 +83,7 @@ export default function Programme({ programme }: ProgrammeProps) {
                         {data.stories?.length ? (
                             <SectionReveal delay={0.1} className="mt-14">
                                 <SectionHeading title="Our stories" />
-                                <div className="mt-6 max-w-2xl">
+                                <div className="mt-6">
                                     <ImageStoryList stories={data.stories} />
                                 </div>
                             </SectionReveal>

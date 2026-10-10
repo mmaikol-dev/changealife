@@ -46,25 +46,37 @@ export const programmes: Programme[] = [
             'Creation of playgrounds',
         ],
         goal: 'To ensure children residing in prison with their mothers enjoy good early development like other children in the outside world, and activities that occupy their minds and form good memories of early life.',
-        image: '/images/cali/empower-her-wellness.jpg',
+        image: '/images/cali/empower/hero.jpg',
+        gallery: [
+            '/images/cali/empower/hero.jpg',
+            '/images/cali/empower/gallery-1.jpg',
+            '/images/cali/empower/gallery-2.jpg',
+            '/images/cali/empower/gallery-3.jpg',
+            '/images/cali/empower/gallery-5.jpg',
+            '/images/cali/empower/kitale-visit-1.jpg',
+            '/images/cali/empower/kitale-visit-2.jpg',
+            '/images/cali/empower/kitale-visit-3.jpg',
+            '/images/cali/empower/shimo-la-tewa-2.jpg',
+            '/images/cali/empower/shimo-la-tewa-3.jpg',
+        ],
         stories: [
             {
                 title: 'Langata Women\u2019s Prison',
                 caption:
                     'Visits and activities with children and their mothers at Langata Women\u2019s Prison.',
-                image: '/images/cali/story-langata.jpg',
+                image: '/images/cali/empower/gallery-3.jpg',
             },
             {
                 title: 'Daycare Room Rehabilitation at Kitale Women\u2019s Prison',
                 caption:
                     'Rehabilitation of the daycare holding room at Kitale Women\u2019s Prison.',
-                image: '/images/cali/story-kitale.jpg',
+                image: '/images/cali/empower/kitale-visit-1.jpg',
             },
             {
                 title: 'Shimo La Tewa Prison Visit',
                 caption:
                     'A support visit to children residing at Shimo La Tewa Prison.',
-                image: '/images/cali/story-shimo-la-tewa.jpg',
+                image: '/images/cali/empower/shimo-la-tewa-3.jpg',
             },
         ],
     },
@@ -85,19 +97,19 @@ export const programmes: Programme[] = [
             'Provide wheelchairs and other assistive devices',
         ],
         goal: 'To reduce stigma and discrimination and increase acceptance of persons who are abled differently.',
-        image: '/images/cali/disability-inclusion.jpg',
+        image: '/images/cali/disability-inclusion-2.jpg',
         stories: [
             {
                 title: 'Eyeglasses for the Visually Impaired',
                 caption:
                     'Optical check-ups and eyeglasses for visually-impaired children from humble backgrounds.',
-                image: '/images/cali/disability-inclusion.jpg',
+                image: '/images/cali/disability-eyeglasses.jpg',
             },
             {
                 title: 'From Stigma to Support',
                 caption:
                     'A young boy once kept hidden by his family now attends regular physiotherapy at a local Level 3 hospital.',
-                image: '/images/cali/who-we-are.jpg',
+                image: '/images/cali/disability-inclusion-1.jpg',
             },
         ],
     },
@@ -118,25 +130,14 @@ export const programmes: Programme[] = [
             'Training for young scholars, youth, and women in marginalized communities',
         ],
         goal: 'To enable individuals to thrive in the modern digital landscape — for education, job opportunities, and social engagement.',
-        image: '/images/cali/digital-literacy.jpg',
+        image: '/images/cali/digital-literacy/webinar-banner.jpg',
+        gallery: ['/images/cali/digital-literacy/webinar-banner.jpg'],
         stories: [
             {
-                title: 'Computer Basics for Adults',
+                title: 'Computer Basics, Online Safety & Digital Skills',
                 caption:
-                    'Hands-on introduction to computers — keyboard and mouse skills, file management, and everyday internet use — for adults in underserved settlements.',
-                image: '/images/cali/digital-literacy.jpg',
-            },
-            {
-                title: 'Online Safety Workshops',
-                caption:
-                    'Practical sessions on secure passwords, recognising scams and phishing, and protecting personal information online.',
-                image: '/images/cali/who-we-are.jpg',
-            },
-            {
-                title: 'Digital Skills for Young Scholars',
-                caption:
-                    'School holidays training that gives learners essential skills to study, research, and communicate safely in the digital world.',
-                image: '/images/cali/hero.jpg',
+                    'Hands-on computer training for adults in underserved settlements — keyboard and mouse skills, file management, and everyday internet use — alongside practical online-safety workshops on secure passwords and recognising scams, and school-holiday training that gives young scholars the skills to study, research, and communicate safely online.',
+                image: '/images/cali/digital-literacy/webinar-banner.jpg',
             },
         ],
     },

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { siteEase, useMotionSafe } from '@/site/motion';
 import { RevealHeading } from '@/components/site/reveal-heading';
@@ -10,6 +11,7 @@ interface PageHeaderProps {
     description?: ReactNode;
     children?: ReactNode;
     image?: string;
+    images?: string[];
     titleClassName?: string;
     descriptionClassName?: string;
 }
@@ -25,10 +27,25 @@ export function PageHeader({
     description,
     children,
     image,
+    images,
     titleClassName,
     descriptionClassName,
 }: PageHeaderProps) {
     const { reduced } = useMotionSafe();
+    const slides = images?.length ? images : image ? [image] : [];
+    const [active, setActive] = useState(0);
+
+    useEffect(() => {
+        if (reduced || slides.length < 2) {
+            return;
+        }
+
+        const timer = setInterval(() => {
+            setActive((current) => (current + 1) % slides.length);
+        }, 5000);
+
+        return () => clearInterval(timer);
+    }, [reduced, slides.length]);
 
     const rise = (delay: number) => ({
         initial: reduced ? false : { opacity: 0, y: 18 },
@@ -38,13 +55,19 @@ export function PageHeader({
 
     return (
         <section className="relative overflow-hidden bg-brand-950">
-            {image ? (
+            {slides.length ? (
                 <>
-                    <div
-                        aria-hidden="true"
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url('${image}')` }}
-                    />
+                    {slides.map((src, index) => (
+                        <motion.div
+                            key={src}
+                            aria-hidden="true"
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: `url('${src}')` }}
+                            initial={false}
+                            animate={{ opacity: index === active ? 1 : 0 }}
+                            transition={{ duration: 1.2, ease: siteEase }}
+                        />
+                    ))}
                     <div
                         aria-hidden="true"
                         className="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/85 to-brand-950/70"

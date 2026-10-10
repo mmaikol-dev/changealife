@@ -52,6 +52,7 @@ export interface Programme {
     bullets: string[];
     goal: string;
     image: string;
+    gallery?: string[];
     stories?: ProgrammeStory[];
 }
 

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,8 +12,6 @@ import { StatCounter } from '@/components/site/counter';
 import SplitText from '@/components/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-const LazyAurora = lazy(() => import('@/components/Aurora'));
 
 const statIntervalMs = 4200;
 
@@ -123,26 +121,8 @@ export function SiteHero() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-brand-950/80 via-brand-950/60 to-brand-950/90" />
 
-            {reduced ? (
+            {reduced ? null : (
                 <>
-                    <div className="site-aurora absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-sun-500/25 blur-[110px]" />
-                    <div className="site-aurora site-aurora-delay absolute right-[-10%] bottom-[-20%] h-[26rem] w-[26rem] rounded-full bg-brand-400/30 blur-[120px]" />
-                </>
-            ) : (
-                <>
-                    <div
-                        aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 hidden opacity-60 mix-blend-screen lg:block"
-                    >
-                        <Suspense fallback={null}>
-                            <LazyAurora
-                                colorStops={['#2a1b33', '#d9a441', '#3a2347']}
-                                amplitude={0.9}
-                                blend={0.55}
-                                speed={0.6}
-                            />
-                        </Suspense>
-                    </div>
                     <div className="site-aurora absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-sun-500/25 blur-[110px] lg:hidden" />
                     <div className="site-aurora site-aurora-delay absolute right-[-10%] bottom-[-20%] h-[26rem] w-[26rem] rounded-full bg-brand-400/30 blur-[120px] lg:hidden" />
                 </>

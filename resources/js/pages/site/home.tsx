@@ -22,6 +22,7 @@ import {
 import { ProgrammesCarousel } from '@/components/site/programmes-carousel';
 import type { CarouselItem } from '@/components/site/programmes-carousel';
 import { DirectionalReveal } from '@/components/site/directional-reveal';
+import { ScrollRevealText } from '@/components/site/scroll-reveal-text';
 import { programmeHrefs } from '@/components/site/programme-card';
 import { CaseCard } from '@/components/site/case-card';
 import { BlogRow } from '@/components/site/blog-card';
@@ -72,16 +73,15 @@ export default function Home({ cases, blogPosts }: HomeProps) {
                             titleClassName="text-4xl tracking-tight sm:text-5xl"
                         />
                     </SectionReveal>
-                    <SectionReveal delay={0.1}>
+                    <div>
                         {whoWeAre.paragraphs.map((paragraph) => (
-                            <p
+                            <ScrollRevealText
                                 key={paragraph.slice(0, 24)}
+                                text={paragraph}
                                 className="mt-3 text-base leading-relaxed text-brand-700/90 sm:text-lg"
-                            >
-                                {paragraph}
-                            </p>
+                            />
                         ))}
-                    </SectionReveal>
+                    </div>
                 </div>
                 <DirectionalReveal className="mt-14" distance={120}>
                     <ParallaxImage
